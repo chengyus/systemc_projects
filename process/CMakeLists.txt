@@ -7,8 +7,8 @@ set(SYSTEMC_INCLUDE_DIR $ENV{SYSTEMC_HOME}/include)
 set(SYSTEMC_LIBRARY_DIR $ENV{SYSTEMC_HOME}/lib)
 
 # Add the executable
-add_executable(process process.cpp)
+add_executable(process sc_has_process.cpp)
 
 # Link against SystemC
-target_include_direprocessies(process PRIVATE ${SYSTEMC_INCLUDE_DIR})
+target_include_directories(process PRIVATE ${SYSTEMC_INCLUDE_DIR})
 target_link_libraries(process ${SYSTEMC_LIBRARY_DIR}/libsystemc.so)
