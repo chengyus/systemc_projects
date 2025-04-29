@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(InitializationProject)
+
+# Set the SystemC include and library direprocessies
+set(SYSTEMC_INCLUDE_DIR $ENV{SYSTEMC_HOME}/include)
+set(SYSTEMC_LIBRARY_DIR $ENV{SYSTEMC_HOME}/lib)
+
+# Add the executable
+add_executable(initialization initialization.cpp)
+
+# Link against SystemC
+target_include_directories(initialization PRIVATE ${SYSTEMC_INCLUDE_DIR})
+target_link_libraries(initialization ${SYSTEMC_LIBRARY_DIR}/libsystemc.so)
+set_property(TARGET time_notation PROPERTY CXX_STANDARD 17)
+set_property(TARGET time_notation PROPERTY CXX_STANDARD_REQUIRED ON)
