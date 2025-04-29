@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(CincurrencyProject)
+project(ConcurrencyProject)
 
 # Set the SystemC include and library direprocessies
 set(SYSTEMC_INCLUDE_DIR $ENV{SYSTEMC_HOME}/include)

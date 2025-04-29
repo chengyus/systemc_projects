@@ -15,7 +15,7 @@ SC_MODULE(CONCURRENCY) {
   }
   void thread2() {
     while(true) {
-      std::cout << "\t" << sc_time_stamp() << ": thread2" << std::endl;
+      std::cout << "  " << sc_time_stamp() << ": thread2" << std::endl;
       wait(3, SC_SEC);
     }
   }
