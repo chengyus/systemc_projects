@@ -20,7 +20,7 @@ SC_MODULE(EVENT) {
   void catcher() {
     while (true) { // loop forever
       wait(e); // wait for event
-      std::cout << "Event cateched at " << sc_time_stamp() << std::endl; // print to console
+      std::cout << "Event caught at " << sc_time_stamp() << std::endl; // print to console
     }
   }
 };
